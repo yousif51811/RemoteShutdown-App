@@ -1,4 +1,6 @@
-﻿namespace RemoteShutdownApp
+﻿using Microsoft.Maui.Controls;
+
+namespace RemoteShutdownApp
 {
     public partial class AppShell : Shell
     {

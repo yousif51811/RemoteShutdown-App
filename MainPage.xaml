@@ -29,7 +29,7 @@
                 />
 
         </VerticalStackLayout>
-        <VerticalStackLayout Grid.Row="2">
+        <VerticalStackLayout Grid.Row="1">
         <Label Text="Config"
                Style="{StaticResource Headline}"
                SemanticProperties.HeadingLevel="Level1"
@@ -42,7 +42,7 @@
                 <Label Text="URL: "
                    Scale="1.5"
                        VerticalOptions="Center"/>
-                <Entry Grid.Column="2" Placeholder="Enter URL to check"
+                <Entry Grid.Column="1" Placeholder="Enter URL to check"
                        VerticalOptions="Center" x:Name="URLtxt"/>
 
             </Grid>
@@ -54,7 +54,7 @@
                 <Label Text="API:"
                    Scale="1.5"
                        VerticalOptions="Center"/>
-                <Entry Grid.Column="2" Placeholder="Enter Your Dropbox access token"
+                <Entry Grid.Column="1" Placeholder="Enter Your Dropbox access token"
                        VerticalOptions="Center" x:Name="accesstxt"/>
 
             </Grid>
@@ -63,9 +63,9 @@
                     HorizontalOptions="Center"
                     Clicked="SaveBtn_Clicked"/>
         </VerticalStackLayout>
-        <Label HorizontalOptions="Center"
+    <Label HorizontalOptions="Center"
        VerticalOptions="End"
        Text="Made with ❤️ by yousif51811"
-               Grid.Row="2"/>
+               Grid.Row="1"/>
     </Grid>
 </ContentPage>

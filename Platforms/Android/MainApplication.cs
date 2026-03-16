@@ -1,5 +1,8 @@
 ﻿using Android.App;
 using Android.Runtime;
+using Microsoft.Maui;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Maui.Hosting;
 
 namespace RemoteShutdownApp
 {

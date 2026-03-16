@@ -1,7 +1,8 @@
-﻿using Microsoft.Maui.Controls.Platform;
-using Dropbox.Api;
-using System.Net.Http;
-using Dropbox.Api.TeamLog;
+﻿using Dropbox.Api;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.ApplicationModel;
+
 namespace RemoteShutdownApp
 {
     public partial class MainPage : ContentPage
@@ -65,21 +66,18 @@ namespace RemoteShutdownApp
             toggling = true;
             try
             {
-                Console.WriteLine("Starting...");
                 if (is1)
                 {
-                    Console.WriteLine("True");
                     await _dropboxClient.Files.UploadAsync("/sh.txt", Dropbox.Api.Files.WriteMode.Overwrite.Instance, body: new MemoryStream(System.Text.Encoding.UTF8.GetBytes("0")));
                 }
                 else
                 {
-                    Console.WriteLine("False");
                     await _dropboxClient.Files.UploadAsync("/sh.txt", Dropbox.Api.Files.WriteMode.Overwrite.Instance, body: new MemoryStream(System.Text.Encoding.UTF8.GetBytes("1")));
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error:" + ex.ToString());
+                await DisplayAlertAsync("Error", ex.ToString(), "OK");
             }
             finally
             {
