@@ -4,7 +4,8 @@ A simple android app to edit a dropbox file's value from 0 to 1 remotely via a t
 > [!NOTE]
 > This app is best paired with the [RemoteShutdown Windows service](https://github.com/yousif51811/RemoteShutdown)
 
-![Demo](/Demo.jpg)
+<img src="/Demo.jpg" alt="Demo" width="400"/>
+
 ## Setup
 #### 1. Create a dropbox app
 Head to [The dropbox developer dashboard](www.dropbox.com/developers/apps) and create a new scoped app.
